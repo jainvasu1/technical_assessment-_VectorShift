@@ -1,0 +1,127 @@
+/* --------------------------------------------------------
+   GLOBAL RESET + FONT
+-------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Animated gradient background */
+  background: linear-gradient(135deg, #5b78ff, #8e4bff);
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* --------------------------------------------------------
+   GLASSMORPHISM CLASS (Used in App.js)
+-------------------------------------------------------- */
+.glass {
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+}
+
+/* --------------------------------------------------------
+   REACT FLOW ENHANCED STYLING
+-------------------------------------------------------- */
+.react-flow__node {
+  transition: all 0.25s ease;
+  border-radius: 14px !important;
+  overflow: hidden;
+}
+
+.react-flow__node:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25) !important;
+  transform: translateY(-2px);
+}
+
+/* Connection Handles */
+.react-flow__handle {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border: 2px solid #5b78ff;
+  box-shadow: 0 0 8px rgba(91, 120, 255, 0.6);
+  transition: all 0.2s ease;
+}
+
+.react-flow__handle:hover {
+  width: 14px;
+  height: 14px;
+  background: #8e4bff;
+  border-color: white;
+}
+
+/* Edges */
+.react-flow__edge-path {
+  stroke: #ffffff;
+  stroke-width: 2;
+  opacity: 0.85;
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: #ffde59;
+  stroke-width: 3;
+}
+
+/* Controls (zoom, fit view) */
+.react-flow__controls {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-radius: 10px !important;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mini-map */
+.react-flow__minimap {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-radius: 12px !important;
+  backdrop-filter: blur(10px) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* Background grid lines */
+.react-flow__background {
+  opacity: 0.2;
+}
+
+.react-flow__handle {
+  background: #B537F2 !important;
+  border: 2px solid #fff;
+  box-shadow: 0 0 10px #B537F2, 0 0 20px #B537F2;
+  width: 12px;
+  height: 12px;
+}
+
+.react-flow__edge-path {
+  stroke: #00CFFF !important;
+  stroke-width: 2px;
+  filter: drop-shadow(0 0 8px #00CFFF);
+}
